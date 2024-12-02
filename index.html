@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Template Platform</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-XXXXXXX-X');
+    </script>
+  </head>  
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Particle Container -->
+    <div id="particles-js"></div>
+    
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1>Unleash Your Creativity</h1>
+      <p>Empower your ideas with our cutting-edge tools. Design, edit, and create with ease.</p>
+      <div class="hero-buttons">
+        <button class="primary-btn" onclick="gtag('event', 'click', {'event_category': 'Button', 'event_label': 'Get Started'});">Get Started</button>
+        <button class="secondary-btn">Learn More</button>
+      </div>
+    </div>
+    
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="assets/images/illustration.jpg" alt="Illustration">
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+    
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-list">
+      <div class="feature-card">
+        <img src="assets/icons/speed.png" alt="Speed">
+        <h3>Fast</h3>
+        <p>Create designs in seconds with AI-powered tools.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/customizable.png" alt="Customizable">
+        <h3>Customizable</h3>
+        <p>Modify templates to suit your style and needs.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/secure.png" alt="Secure">
+        <h3>Secure</h3>
+        <p>Your data is safe with industry-standard encryption.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial-item">
+        <img src="assets/images/user1.jpg" alt="User 1">
+        <blockquote>"This platform has revolutionized how I create content!"</blockquote>
+        <p>- Jane Doe</p>
+      </div>
+      <div class="testimonial-item">
+        <img src="assets/images/user2.jpg" alt="User 2">
+        <blockquote>"AI templates have saved me so much time and effort!"</blockquote>
+        <p>- John Smith</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- FAQ Section -->
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h3>How does the platform work? <span class="icon">+</span></h3>
+        <p class="answer">Simply choose a template, customize it, and download your creation.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h3>Are my designs stored securely? <span class="icon">+</span></h3>
+        <p class="answer">Yes, all your data is protected with the latest security measures.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h3>Can I use the templates for commercial purposes? <span class="icon">+</span></h3>
+        <p class="answer">Absolutely! Our templates are designed for both personal and commercial use.</p>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 AI Template Platform. All rights reserved.</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
+  </footer>
+</body>
+    <script src="scripts/app.js"></script>
+<script>
+    function toggleFaq(item) {
+      const isOpen = item.classList.contains('open');
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(faq => faq.classList.remove('open'));
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": { "value": "#00f2fe" },
+      "shape": {
+        "type": "circle",
+        "stroke": { "width": 0, "color": "#000000" },
+        "polygon": { "nb_sides": 5 }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00f2fe",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" },
+        "resize": true
+      },
+      "modes": {
+        "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+        "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+        "repulse": { "distance": 200, "duration": 0.4 },
+        "push": { "particles_nb": 4 },
+        "remove": { "particles_nb": 2 }
+      }
+    },
+    "retina_detect": true
+  });
+  </script>  
+</html>
